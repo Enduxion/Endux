@@ -1,0 +1,116 @@
+@font-face {
+  font-family: KoHo;
+  src: url("../font/KoHo.ttf");
+}
+#navBar {
+  border-radius: 80px;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  background: linear-gradient(
+    to left bottom,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.0001)
+  );
+  top: 2.5%;
+  left: 0;
+  right: 0;
+  height: 80px;
+  align-items: center;
+  backdrop-filter: blur(10px) brightness(120%);
+  transition: 0.3s;
+  z-index: 10;
+}
+#navBarAfterMoved {
+  position: fixed;
+  background: linear-gradient(
+    to left bottom,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.0001)
+  );
+  border-radius: 20px;
+  top: 3%;
+  right: 50%;
+  transform: translateX(50%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 60%;
+  height: 50px;
+  backdrop-filter: blur(10px) brightness(120%);
+  z-index: 10;
+}
+#navBarAfterMoved #logoImage {
+  margin-left: 10px;
+  max-height: 50px;
+}
+#navBarAfterMoved #navBarLinks a:hover {
+  background-color: transparent;
+  color: rgba(227, 227, 227, 0.9);
+  transition: 0.5s ease-in-out;
+}
+
+#logoImage {
+  margin-top: 1px;
+  max-height: 78px;
+}
+#containerDiv {
+  margin-right: auto;
+  transition: 1s;
+}
+#navBarLinks {
+  display: flex;
+  flex-direction: row;
+}
+#navBarLinks a {
+  margin: 4px;
+  padding: 10px;
+  padding-right: 13px;
+  padding-left: 13px;
+  position: relative;
+  color: white;
+  font-family: KoHo;
+  font-size: 17px;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+}
+#navBarLinks a:nth-child(4) {
+  margin-right: 13px;
+}
+#navBarLinks a:hover {
+  color: rgba(227, 227, 227, 0.9);
+  transition: 0.5s ease-in-out;
+}
+#navBarLinks a::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 8%;
+  width: 0%;
+  box-shadow: 0px 0px 5px white;
+  background-color: white;
+  height: 2px;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+#navBarLinks a:hover::before {
+  width: 90%;
+  background-color: white;
+}
+.comeSwap {
+  text-shadow: 0px 0px 50px white;
+  filter: blur(5px);
+}
+@media screen and (max-width: 620px) {
+  #navBarLinks a {
+    display: none;
+  }
+}
+@media screen and (max-width: 805px) {
+  #navBarAfterMoved #navBarLinks a {
+    display: none;
+  }
+}

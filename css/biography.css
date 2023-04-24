@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+}
+body {
+  background-color: #0a192f;
+  height: 100%;
+  overflow-x: hidden;
+}
+#bodyContainer {
+  display: flex;
+  flex-direction: row;
+}
+#mainContainer {
+  margin: 120px 40px 20px 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.popBox {
+  margin-bottom: 30px;
+  padding: 15px;
+  color: white;
+  font-family: Koho;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px white;
+  transition: all 0.3s;
+}
+.titlePopBox {
+  margin-bottom: 13px;
+  font-size: 24px;
+  font-weight: bold;
+}
+#imageContainer {
+  margin: 120px 40px 0 0;
+  box-shadow: inset 0px 0px 20px #0a192f;
+}
+#myPhoto {
+  margin-left: 0px;
+  width: 300px;
+  position: relative;
+  border: 1px solid #0a192f;
+  border-radius: 5%;
+  box-shadow: 10px 5px 20px black;
+  filter: opacity(0.8);
+  transition: all 0.3s;
+}
+.growGreyScale {
+  mix-blend-mode: color !important;
+  height: 150px !important;
+  width: 150px !important;
+}
+#myPhoto:hover {
+  filter: grayscale(0) blur(0px) opacity(1);
+  scale: 1.04;
+}
+#bargraphContainer {
+  margin: 0px 40px;
+  padding: 15px;
+  position: relative;
+  color: white;
+  font-family: Koho;
+  font-size: 17px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px white;
+  z-index: 0;
+}
+#barContainerTitle {
+  margin: 30px 50px;
+  color: white;
+  text-shadow: 0px 0px 10px grey;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+}
+.barContainer {
+  margin: 0px 40px 40px 40px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid white;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px white;
+  transition: all 0.3s;
+}
+.barTitle {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.barContainer .bar {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  display: flex;
+  width: 100%;
+  height: 35px;
+  position: relative;
+  align-items: center;
+  color: black;
+  font-weight: bold;
+  transition: all 0.8s;
+}
+.percentBar {
+  width: var(--bar-width);
+  position: absolute;
+  left: 45px;
+  color: white;
+  text-align: right;
+}
+.barContainer .bar::before {
+  content: "";
+  position: absolute;
+  border-radius: 50px;
+  transform: perspective(500px) rotateX(15deg);
+  left: 0%;
+  bottom: 0%;
+  width: var(--bar-width);
+  height: 100%;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+.hidden {
+  opacity: 0;
+}
+.slideLeft100 {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.slideFromUp {
+  opacity: 0;
+  transform: translate(-50%, 100%) !important;
+}
+.slideLeft50 {
+  opacity: 0;
+  transform: translateX(-50%);
+}
+.popUpBox {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+.crossImage {
+  padding: 10px;
+  max-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-radius: 50%;
+  cursor: crosshair;
+  transform: translateX(-50%);
+  transition: all 1s;
+}
+.crossImage:hover {
+  transform: translateX(-50%) scale(1.3);
+}
+.popUpBoxTitle {
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+}
+.popUpBoxContainer {
+  padding: 30px;
+  width: 75% !important;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.001),
+    transparent
+  );
+  backdrop-filter: blur(10px);
+  transition: 0.6s;
+}
+#conclusionBox {
+  margin: 40px;
+}
+#contactHere {
+  font-weight: bold;
+  color: white;
+  text-decoration: underline;
+  transition: all 1s;
+}
+#contactHere:hover {
+  background: linear-gradient(to left, red, blue);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@keyframes rotateBox {
+  0% {
+    transform: rotateZ(0deg) translate(0%, 0%);
+    opacity: 0.4;
+  }
+  50% {
+    transform: rotateZ(45deg) translate(500%, -500%);
+    opacity: 0.1;
+  }
+  100% {
+    transform: rotateZ(90deg) translate(500%, 0%);
+    opacity: 0.4;
+  }
+}

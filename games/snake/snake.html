@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./snake.css" />
+    <link rel="stylesheet" href="../css/utils.css" />
+    <link rel="stylesheet" href="../../css/cursor.css" />
+    <title>Endux - SnakeGame</title>
+  </head>
+  <body>
+    <!--Background-->
+    <div class="backgroundContainer">
+      <div class="backgroundAnimation"></div>
+      <div class="backgroundAnimation"></div>
+      <div class="backgroundAnimation"></div>
+      <div class="backgroundAnimation"></div>
+      <div class="backgroundAnimation"></div>
+      <div class="backgroundAnimation"></div>
+      <div class="backgroundAnimation"></div>
+      <div class="backgroundAnimation"></div>
+      <div class="backgroundAnimation"></div>
+      <div class="backgroundAnimation"></div>
+      <div class="backgroundAnimation"></div>
+      <div class="backgroundAnimation"></div>
+      <div class="backgroundAnimation"></div>
+      <div class="backgroundAnimation"></div>
+      <div class="backgroundAnimation"></div>
+      <div class="backgroundAnimation"></div>
+      <div class="backgroundAnimation"></div>
+    </div>
+    <!--Buttons-->
+    <!--MainMenu-->
+    <div class="mainMenu" id="mainMenuContainer">
+      <span id="titleGame">Snake Game</span>
+      <a class="buttonActions mainMenuButton" id="startGame">Play</a>
+      <a class="buttonActions mainMenuButton" id="startGame2">Play (Weird)</a>
+      <a class="buttonActions mainMenuButton" id="backGame">Back</a>
+    </div>
+    <!--Non Hamburger Button-->
+    <div class="buttonMenu" id="buttonMenuContainer">
+      <a class="buttonActions buttonMenuButton" id="restartGame"> Restart </a>
+      <a class="buttonActions buttonMenuButton" id="pauseGame"> Pause </a>
+      <a class="buttonActions buttonMenuButton" id="quitGame">Quit</a>
+    </div>
+    <!--Hamburger Button-->
+    <div class="hStickContainer hidden" id="hStickMenu">
+      <div class="hStick" id="firstHStick"></div>
+      <div class="hStick" id="secondHStick"></div>
+      <div class="hStick" id="thirdHStick"></div>
+    </div>
+    <div class="hButtonMenu hidden" id="hButtonMenuContainer">
+      <a class="buttonActions hButtonMenuButton" id="hRestartGame"> Restart </a>
+      <a class="buttonActions hButtonMenuButton" id="hResumeGame"> Resume </a>
+      <a class="buttonActions hButtonMenuButton" id="hQuitGame"> Quit </a>
+    </div>
+    <!--Canvas-->
+    <div class="mainDiv">
+      <canvas id="mainCanvas"> </canvas>
+    </div>
+    <!--End Game-->
+    <div id="endMenu">
+      <section class="bigKoHoTitle">
+        Score: <span id="scoreBox">0</span>
+      </section>
+      <a name="restartAfterLose" id="endMenuRestartGame" class="endMenuButton">
+        Restart
+      </a>
+      <a name="quitAfterLose" id="endMenuQuitGame" class="endMenuButton">
+        Quit
+      </a>
+    </div>
+    <div id="cursor"></div>
+    <script src="../../javascript/cursor.js"></script>
+    <script src="../javascript/buttons.js"></script>
+    <script src="../javascript/utils.js"></script>
+    <script src="./snake.js"></script>
+  </body>
+</html>

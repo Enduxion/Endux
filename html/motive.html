@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Endux - Motive</title>
+    <!--CSS links-->
+    <!--Navigation Bar CSS-->
+    <link rel="stylesheet" href="../css/navBar.css" />
+    <!--scrollbar Css-->
+    <link rel="stylesheet" href="../css/scrollbar.css" />
+    <!--cursor Css-->
+    <link rel="stylesheet" href="../css/cursor.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: KoHo;
+        background-color: #0a192f;
+        overflow: hidden;
+      }
+      .mainContainer {
+        position: relative;
+        margin: 140px 0px 0px 0px;
+        height: 100vh;
+      }
+      .innerContainer {
+        position: relative !important;
+        background-color: #00f587;
+        height: 120px;
+        color: black;
+        font-weight: bold;
+        font-size: 50px;
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        border: 1px solid white;
+        padding: 10px;
+      }
+      #firstContainer {
+        left: -0.41%;
+        rotate: 5deg;
+        z-index: 3;
+      }
+      #secondContainer {
+        left: 45%;
+        rotate: -5deg;
+        z-index: 2;
+      }
+      #thirdContainer {
+        left: -1.61%;
+        rotate: 6deg;
+        z-index: 1;
+      }
+      #fourthContainer {
+        top: -44%;
+        left: -0.61%;
+        rotate: 10deg;
+        z-index: 1;
+      }
+      #fifthContainer {
+        top: -45%;
+        left: 55%;
+        rotate: -10deg;
+        z-index: 3;
+      }
+      #sixthContainer {
+        top: -120%;
+        left: 55%;
+        rotate: -10deg;
+        z-index: 3;
+      }
+    </style>
+  </head>
+  <body id="body">
+    <!--Navigation Bar-->
+    <nav id="navBar">
+      <div id="containerDiv">
+        <a href="./index.html" id="logoLink"
+          ><img src="../image/logo.png" id="logoImage" alt="logo"
+        /></a>
+      </div>
+      <div id="navBarLinks">
+        <a href="./index.html" id="currentlySelected" class="comeSwap">Home</a>
+        <a href="./biography.html" class="comeSwap">About Me</a>
+        <a href="./games.html" class="comeSwap">Games</a>
+        <a href="./contact.html" class="comeSwap">Contact Me</a>
+      </div>
+    </nav>
+    <!--Real Content-->
+    <div class="mainContainer">
+      <div class="innerContainer" id="firstContainer">
+        This Page is currently in development.
+      </div>
+      <div class="innerContainer" id="secondContainer">
+        Sorry for this inconvenience notice!
+      </div>
+      <div class="innerContainer" id="thirdContainer">
+        Check out my other contents!
+      </div>
+      <div class="innerContainer" id="fourthContainer">
+        Learn about me in about me section!
+      </div>
+      <div class="innerContainer" id="fifthContainer">
+        Contact Me If you want to talk!
+      </div>
+      <div class="innerContainer" id="sixthContainer">
+        This page will be constructed soon!
+      </div>
+    </div>
+    <div id="cursor"></div>
+    <!--Internal Javascript-->
+    <script src="../javascript/cursor.js"></script>
+    <script src="../javascript/navBar.js"></script>
+    <script>
+      mouseMovement(document.querySelectorAll(".innerContainer"));
+    </script>
+    <!--External Javascript-->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

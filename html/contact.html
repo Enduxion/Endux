@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Endux - Contact Me</title>
+    <!--CSS links-->
+    <!--Navigation Bar CSS-->
+    <link rel="stylesheet" href="../css/navBar.css" />
+    <!--Footer Css-->
+    <link rel="stylesheet" href="../css/footBar.css" />
+    <!--scrollbar Css-->
+    <link rel="stylesheet" href="../css/scrollbar.css" />
+    <!--cursor Css-->
+    <link rel="stylesheet" href="../css/cursor.css" />
+    <!--Contact Css-->
+    <link rel="stylesheet" href="../css/contact.css" />
+  </head>
+
+  <body id="body">
+    <!--Navigation Bar-->
+    <nav id="navBar">
+      <div id="containerDiv">
+        <a href="./index.html" id="logoLink"
+          ><img src="../image/logo.png" id="logoImage" alt="logo"
+        /></a>
+      </div>
+      <div id="navBarLinks">
+        <a href="./index.html" id="currentlySelected" class="comeSwap">Home</a>
+        <a href="./biography.html" class="comeSwap">About Me</a>
+        <a href="./games.html" class="comeSwap">Games</a>
+        <a href="./contact.html" class="comeSwap">Contact Me</a>
+      </div>
+    </nav>
+    <!--Real Content-->
+    <canvas id="canvas1"></canvas>
+    <div class="bigBox">
+      <div class="mainContainer">
+        <section class="titleMC">Other Links</section>
+        <a
+          class="linksContainer"
+          href="https://www.facebook.com/fytpr"
+          target="_blank"
+        >
+          <section class="links">
+            <span class="linksTitle">Facebook</span>
+            <span class="Alinks">www.facebook.com<br \ />FYTPR</span>
+          </section>
+        </a>
+        <a
+          class="linksContainer"
+          href="https://www.youtube.com/@enduxion"
+          target="_blank"
+        >
+          <section class="links">
+            <span class="linksTitle">Youtube</span>
+            <span class="Alinks">www.youtube.com<br \ />ENDUXION</span>
+          </section>
+        </a>
+        <a
+          class="linksContainer"
+          href="https://www.chess.com/member/god_pawan"
+          target="_blank"
+        >
+          <section class="links">
+            <span class="linksTitle">Chess</span>
+            <span class="Alinks">www.chess.com<br \ />GOD_PAWAN</span>
+          </section>
+        </a>
+      </div>
+      <div class="mainContainer">
+        <section class="titleMC">Contact Me</section>
+        <div class="inputContainer">
+          <div class="nameContainer">
+            <input
+              class="inputText"
+              type="text"
+              placeholder="First Name"
+              autocomplete="nope"
+              id="firstName"
+            />
+            <input
+              class="inputText"
+              type="text"
+              placeholder="Last Name"
+              autocomplete="nope"
+              id="lastName"
+            />
+          </div>
+          <input
+            class="inputText"
+            type="email"
+            placeholder="Email"
+            autocomplete="off"
+            id="email"
+          />
+          <input
+            class="inputText"
+            type="tel"
+            placeholder="Phone Number"
+            autocomplete="nope"
+            id="telNum"
+          />
+          <select name="Why" class="inputText optionText" id="reason">
+            <option value="0" disabled selected hidden>Reason</option>
+            <option value="1">Report A Problem!</option>
+            <option value="2">Want to know more!</option>
+            <option value="3">Business Talk!</option>
+            <option value="4">Others!</option>
+          </select>
+          <textarea
+            rows="3"
+            class="inputText lastText"
+            placeholder="Details"
+            id="reasonBox"
+          ></textarea>
+          <button id="submit">Submit</button>
+        </div>
+      </div>
+      <div class="mainContainer">
+        <section class="titleMC">Other Links</section>
+        <a
+          class="linksContainer"
+          href="mailTo:endux.pg@gmail.com"
+          target="_blank"
+        >
+          <section class="links">
+            <span class="linksTitle">Gmail</span>
+            <span class="Alinks">Personalized Message<br \ />ENDUX</span>
+          </section>
+        </a>
+        <a
+          class="linksContainer"
+          href="mailTo:gurungpawan45@outlook.com"
+          target="_blank"
+        >
+          <section class="links">
+            <span class="linksTitle">Outlook</span>
+            <span class="Alinks">Personalized Message<br \ />Pawan Gurung</span>
+          </section>
+        </a>
+        <a
+          class="linksContainer"
+          href="mailTo:gurungpawan.dll110@gmail.com"
+          target="_blank"
+        >
+          <section class="links">
+            <span class="linksTitle">Gmail</span>
+            <span class="Alinks">Personalized Message<br \ />Pawan Gurung</span>
+          </section>
+        </a>
+      </div>
+    </div>
+    <div class="mainPopBox" id="popBoxSubmit">
+      <div class="popBox">
+        <section class="popBoxTitle">Thank You For Sending Message!</section>
+        <div class="popBoxMiddle">
+          <section class="popBoxDescription">
+            Your message will be read soon by moderators and will reach to Pawan
+            soon. Thank you for contacting us! We will reply to you in 24 hours.
+            Stay tuned!
+          </section>
+        </div>
+        <button class="okButton" id="okBtn">Okay!</button>
+      </div>
+    </div>
+    <div class="mainPopBox" id="popBoxCouldnt">
+      <div class="popBox">
+        <section class="popBoxTitle">Couldn't Send Message!</section>
+        <div class="popBoxMiddle">
+          <section class="popBoxDescription">
+            We couldn't send message for some reason! Please try again, if it
+            persists then contact me via the links given on the side!
+          </section>
+        </div>
+        <button class="okButton" id="okBtn2">Okay!</button>
+      </div>
+    </div>
+    <canvas id="canvas2"></canvas>
+    <div id="cursor"></div>
+    <!--Email Javascript External -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("s0HV1Jkwt07UZ0-jW");
+      })();
+    </script>
+    <!--Internal Javascript-->
+    <script src="../javascript/cursor.js"></script>
+    <script src="../javascript/navBar.js"></script>
+    <script src="../games/javascript/particle.js"></script>
+    <script src="../javascript/contact.js"></script>
+    <!--External Javascript-->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+}
+html {
+  height: 100%;
+}
+body {
+  background-color: #0a192f;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: KoHo;
+}
+#canvas1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.bigBox {
+  margin: 130px 60px 10px 60px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.linksContainer {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-decoration: none;
+  align-items: center;
+}
+.links {
+  margin-top: 20px;
+  width: 75%;
+  padding-block: 15px;
+  color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: inset 2px 2px 2px black;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.001),
+    rgba(255, 255, 255, 0.09)
+  );
+}
+.links:hover {
+  color: white;
+  box-shadow: -2px 2px 2px black;
+}
+.links:hover .Alinks {
+  color: white;
+}
+.links:hover .linksTitle {
+  border-bottom: 2px solid white;
+}
+.linksTitle {
+  width: 75%;
+  position: relative;
+  text-align: center;
+  font-size: 24px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  transition: 0.3s;
+}
+.Alinks {
+  font-size: 18px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  transition: 0.3s;
+}
+.mainContainer {
+  position: relative;
+  margin-inline: 10px;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.0001)
+  );
+  box-shadow: 2px 2px 4px #000;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  backdrop-filter: blur(20px);
+}
+.titleMC {
+  position: relative;
+  margin-top: 10px;
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  text-shadow: 3px 3px 6px black, 0px 0px 5px white;
+}
+.inputContainer {
+  margin: 30px 0px 0px 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.nameContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.inputText {
+  font-family: KoHo;
+  margin: 0px 15px 20px 15px;
+  text-align: center;
+  width: 90%;
+  height: 40px;
+  border-radius: 3px;
+  border: none;
+  box-shadow: inset 2px 2px 2px black;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.001),
+    rgba(255, 255, 255, 0.09)
+  );
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.6);
+  appearance: none;
+  transition: 0.3s;
+}
+.inputText:focus {
+  outline: none;
+  box-shadow: inset 4px 4px 4px black;
+}
+.optionText option {
+  font-size: 20px;
+  background-color: #0a192f;
+  color: white;
+}
+.lastText {
+  resize: none;
+  height: 100px !important;
+}
+#submit {
+  font-family: KoHo;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: bold;
+  outline: none;
+  border: none;
+  box-shadow: 2px 2px 2px black;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.001),
+    rgba(255, 255, 255, 0.09)
+  );
+  padding: 7px 12px 7px 12px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  width: 100px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+#submit:hover {
+  color: rgba(255, 255, 255, 1);
+  scale: 1.05;
+}
+.mainPopBox {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 150;
+}
+.mainPopBox:before {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  background-image: url("../image/texture1.png");
+  opacity: 0.05;
+}
+.popBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50vw;
+  height: 30vh;
+  transform: translate(-50%, -50%);
+
+  color: white;
+  font-size: 32px;
+  border-radius: 10px;
+
+  background: linear-gradient(
+    to bottom right,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.3)
+  );
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 200;
+}
+.popBoxDescription {
+  font-size: 20px;
+}
+.popBoxTitle {
+  border-bottom: 2px solid white;
+}
+.okButton {
+  font-family: KoHo;
+  color: white;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  box-shadow: 2px 2px 2px black;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.2)
+  );
+  padding: 7px 12px 7px 12px;
+  margin-top: 50px;
+  border-radius: 15px;
+  width: 200px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+.okButton:hover {
+  scale: 1.05;
+}
+.popBoxMiddle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.opaceBox {
+  opacity: 0;
+  transition: 0.4s;
+}
+#canvas2 {
+  margin-top: auto;
+  width: 100%;
+  height: 60px;
+}

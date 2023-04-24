@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  cursor: none;
+}
+body {
+  background-color: #0a192f;
+  overflow-x: hidden;
+}
+.mainContainer {
+  margin: 120px 40px 20px 40px;
+  padding: 10px;
+  font-family: Koho;
+  font-size: 20px;
+  color: white;
+
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px white;
+
+  text-decoration: none;
+  transition: 0.4s;
+}
+.showGameTitle {
+  padding: 10px;
+  font-weight: bold;
+  width: 100%;
+  text-shadow: 0px 0px 10px white;
+  text-align: center;
+  font-size: 32px !important;
+}
+.gameBoxTitleLetter {
+  display: inline-flex;
+  transition: 0.3s;
+}
+.backgroundContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: var(--window-height);
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+.backgroundAnimation {
+  height: 100px;
+  width: 100px;
+  box-shadow: 0px 0px 10px white, inset 0px 0px 10px white;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  opacity: 0.9;
+  animation: rotateBox 50s linear infinite;
+  z-index: -1;
+  transition: all 0.4s;
+}
+.gameBoxContainer {
+  margin: 10px 30px 30px 30px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px white;
+  transition: 0.4s;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  transition: 0.3s;
+}
+.gameBoxContainer:hover {
+  transform: scale(1.04);
+  box-shadow: 0px 0px 20px white;
+}
+.gameBoxTitle {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+.gameBoxInner {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: justify;
+  margin-right: auto;
+  width: calc(100% - 190px);
+}
+.gameBoxImage {
+  margin: 10px 7px 10px 20px;
+  border: 1px solid white;
+  border-radius: 10px;
+  width: 190px;
+  height: 190px;
+}
+#snakeGameImage {
+  background-image: url("../image/ovalArt5.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#shooterGameImage {
+  background-image: url("../image/ovalArt6.png");
+  background-size: cover;
+  background-position: center;
+}
+#SGTGameImage {
+  pointer-events: none;
+  background-image: url("../image/WP.png");
+  background-size: cover;
+  background-position: center;
+}
+#ORXGameImage {
+  background-image: url("../image/ovalArt7.png");
+  background-size: cover;
+  background-position: center;
+}
+@keyframes rotateBox {
+  0% {
+    transform: rotateZ(0deg) translate(0%, 0%);
+    opacity: 0.9;
+  }
+  50% {
+    transform: rotateZ(40deg) translate(500%, -500%);
+    opacity: 0.6;
+  }
+  100% {
+    transform: rotateZ(80deg) translate(0%, 0%);
+    opacity: 0.9;
+  }
+}
