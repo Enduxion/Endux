@@ -54,6 +54,9 @@ body {
   z-index: -1;
   transition: all 0.4s;
 }
+.opacityZero {
+  opacity: 0;
+}
 .gameBoxContainer {
   margin: 10px 30px 30px 30px;
   padding: 10px;

@@ -115,6 +115,7 @@ document.addEventListener("scroll", () => {
   mouseCustomClass(document.getElementById("myPhoto"), "growGreyScale");
   mouseMovement(document.querySelectorAll(".barContainer"));
   mouseMovementSingle(document.getElementById("contactHere"));
+  mouseMovementSingle(document.getElementById("downloadHere"));
   mouseMovement(document.querySelectorAll(".crossImage"));
   mouseMovement(document.querySelectorAll(".popUpBoxContainer"));
 }

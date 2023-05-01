@@ -193,6 +193,18 @@ body {
   text-decoration: underline;
   transition: all 1s;
 }
+#downloadHere {
+  font-weight: bold;
+  color: white;
+  text-decoration: underline;
+  transition: all 1s;
+}
+#downloadHere:hover {
+  background: linear-gradient(to left, red, blue);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 #contactHere:hover {
   background: linear-gradient(to left, red, blue);
   background-clip: text;

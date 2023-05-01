@@ -3,11 +3,11 @@ const observer = new IntersectionObserver((inputs) => {
     if (input.isIntersecting) {
       setTimeout(() => {
         input.target.classList.remove("opacityZero");
-      }, 50);
+      }, 100);
     } else {
       setTimeout(() => {
         input.target.classList.add("opacityZero");
-      }, 50);
+      }, 100);
     }
   });
 });

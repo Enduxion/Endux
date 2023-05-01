@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--CSS links-->
+    <!--Navigation Bar CSS-->
+    <link rel="stylesheet" href="../css/navBar.css" />
+    <!--scrollbar Css-->
+    <link rel="stylesheet" href="../css/scrollbar.css" />
+    <!--cursor Css-->
+    <link rel="stylesheet" href="../css/cursor.css" />
+    <!--Download Css-->
+    <link rel="stylesheet" href="../css/download.css" />
+    <!--Quick CSS-->
+    <style>
+      .gameBoxInner {
+        width: 100% !important;
+        text-align: center !important;
+        aspect-ratio: 2 / 1;
+        align-items: center;
+      }
+      .gameBoxContainer {
+        width: 50% !important;
+      }
+    </style>
+    <title>Endux - Downloads</title>
+  </head>
+  <body>
+    <!--Navigation Bar-->
+    <nav id="navBar">
+      <div id="containerDiv">
+        <a href="./index.html" id="logoLink"
+          ><img src="../image/logo.png" id="logoImage" alt="logo"
+        /></a>
+      </div>
+      <div id="navBarLinks">
+        <a href="./index.html" class="comeSwap">Home</a>
+        <a href="./biography.html" class="comeSwap">About Me</a>
+        <a href="./games.html" class="comeSwap">Games</a>
+        <a href="./download.html" class="comeSwap" id="currentlySelected"
+          >Download</a
+        >
+        <a href="./contact.html" class="comeSwap">Contact Me</a>
+      </div>
+    </nav>
+    <!--Real Content-->
+    <div class="mainContainer">
+      <div class="showGame">
+        <section class="showGameTitle">
+          <span class="gameBoxTitleLetter">D</span
+          ><span class="gameBoxTitleLetter">o</span
+          ><span class="gameBoxTitleLetter">w</span
+          ><span class="gameBoxTitleLetter">n</span
+          ><span class="gameBoxTitleLetter">l</span
+          ><span class="gameBoxTitleLetter">o</span
+          ><span class="gameBoxTitleLetter">a</span
+          ><span class="gameBoxTitleLetter">d</span>
+          <span class="gameBoxTitleLetter">P</span
+          ><span class="gameBoxTitleLetter">r</span
+          ><span class="gameBoxTitleLetter">o</span
+          ><span class="gameBoxTitleLetter">j</span
+          ><span class="gameBoxTitleLetter">e</span
+          ><span class="gameBoxTitleLetter">c</span
+          ><span class="gameBoxTitleLetter">t</span
+          ><span class="gameBoxTitleLetter">s</span
+          ><span class="gameBoxTitleLetter">!</span>
+        </section>
+      </div>
+      <div id="linksContainer">
+        <a class="gameBoxContainer" id="codeDownload">
+          <section class="gameBoxInner">
+            <section id="codeDownloadTitle" class="gameBoxTitle"></section>
+            <section id="codeDownloadParagraph" class="gameBoxParagraph">
+              Download the code of the project
+            </section>
+          </section>
+        </a>
+        <a class="gameBoxContainer" id="projectDownload">
+          <section class="gameBoxInner">
+            <section id="projectDownloadTitle" class="gameBoxTitle"></section>
+            <section id="projectDownloadParagraph" class="gameBoxParagraph">
+              Download the complete project itself
+            </section>
+          </section>
+        </a>
+      </div>
+    </div>
+    <div id="cursor"></div>
+    <!--Internal Javascript-->
+    <script src="../javascript/cursor.js"></script>
+    <script src="../javascript/navBar.js"></script>
+    <script src="../javascript/save.js"></script>
+    <!--External Javascript-->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
